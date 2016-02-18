@@ -1,0 +1,66 @@
+body {
+  background: #F5F5F5;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+#admin {
+  background: #F5F5F5;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px 0;
+  position: relative;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #006699;
+  margin: 0 auto 20px;
+}
+
+p1 {
+  color: #333333;
+  float:left;
+}
+
+p2 {
+  color: #333333;
+}
+
+
+input {
+  display: block;
+  margin: 10px auto;
+  width: 99%;
+  padding: 8px 0;
+  border: 1px solid #313131;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+input[type="submit"] {
+  color: #FFFFFF;
+  padding: 12px 0;
+}
+
+
+
+.areaa {
+  padding-bottom: 20px;
+}
+.areaa input[type="submit"] {
+  background: #333333;
+  border: none;
+}
+
+.areab {
+  border-top: 2px solid #333333;
+  padding-top: 20px;
+}
+.areab input[type="submit"] {
+  background: #006699;
+  border: none;
+}
+
+
+
+
