@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="US-ASCII">
+    <meta charset="UTF-8">
     <title>Dr.Know | Login</title>
 	<link rel="stylesheet" href="stylesheets/log.css" type="text/css" media="all" /> 
 	<script src="js/log.js"></script>
@@ -13,17 +13,17 @@
 
 <div id="admin">
   	<div class="areaa">	
-		<form name="LoginForm" action="home.html" onSubmit="return InputCheck(this)">
+		<form name="LoginForm" action="index.html" onSubmit="return InputCheck(this)">
      	<h1>Log In</h1>
-		<p1>Username</p1>
-     	<input type"text" id="username">
-		<p1>Password</p1>
-     	<input type="password" id="password">
-		<input type="submit" value="Log In">		
+		<div class="p1">Username</div>
+     	<input type="text" id="username"/>
+		<div class="p1">Password</div>
+     	<input type="password" id="password"/>
+		<input type="submit" value="Log In"/>		
 		</form>
   	</div>
-	<div class="areab">
-    	<a href="register.html"><input type="submit" value="Sign Up"></a>
+	  <div class="areab">
+    	<input type="submit" value="Sign Up" onClick="window.location='index.html'"/>
   	</div>
 </div>
 
