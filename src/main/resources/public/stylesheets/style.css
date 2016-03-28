@@ -1,37 +1,39 @@
+/* CSS Document */
+.banner{margin:auto; background-color:#333333; height:50px; }
+.img2{float:left; width:30%; padding-left:40%; height:50px; }
+.login{color:#FFFFFF; font-weight:bold; font-size:15px; font-family:Arial; float:right; width:20%; padding-right:8px; height:50px; }
 
-#banner{width:70%; margin:auto; background-color:#333333; width:100%; height:50px; }
-.h{color:#FFFFFF; font-weight:bold; font-size:15px; font-family:Arial; padding-top:18px; float:right; padding-right:30px; }
+.main{background-color:#F5F5F5;}
 
-
-#img2{padding-left:40%;}
-
-#top{width:70%; margin:auto; height:76px; background-color:#006699;}
-#img{float:left; }
-#menu{width:40%; height:76px; float:left; background-color:#006699; }
-li{float:right; font-family:Arial; font-size:18px; font-weight:bold;  padding:15px; }
+.top{width:70%; margin:auto; height:80px; background-color:#006699;}
+.img{float:left; }
+.menu{width:40%; height:76px; float:left; background-color:#006699; }
+li{float:right; font-family:Arial; font-size:18px; font-weight:bold;  padding:15px; margin-top:3px;}
 ul{list-style-type:none; text-decoration:none; }
 a:link{text-decoration:none; }
 li a:visited{color:#FFFFFF; text-decoration:none; }
 li a:hover{text-decoration:underline;color:#333333; }
-#bar{height:76px; width:40%; float:left; background-color:#006699;}
-#searchbox{font-family:Arial; font-size:18px; font-style:italic; line-height:150%; margin-top:5%; float:right; }
-#search{font-family:Arial; font-size:18px; font-weight:bold; margin-top: 5.4%; line-height:150%; float:right; margin-right:10px; }
 
-#main{background-color:#F5F5F5; width:100%; height:887px; }
-#content{background-color:#FFFFFF; width:70%; height:765px; margin:auto; }
-p{font-family:Arial; font-size:24px; padding-left:20px; line-height:160%; font-weight:bold; color:#333333; font-style:italic; }
-.p1{font-family:Arial; font-size:20px; padding-left:28px; line-height:150%; font-weight:bold; color:#006699; font-style:italic; }
-.p2{font-family:Arial; font-size:14px; padding-left:25px; line-height:150%; color:#666666; }
-.p3{font-family:Arial; font-size:16px; line-height:150%; color:#006699; font-style:italic; font-weight:bold; }
-.p4{font-family:Arial; font-size:16px; padding-left:100px; line-height:150%; color:#3333333; font-weight:bold; }
-#bottom{width:70%; height:45px; background-color:#F5F5F5; margin-top:3px; margin:auto; }
-.p5{font-family:Arial; font-size:14px; line-height:300%; color:#999999; font-style:italic; padding-left:25%; }
-.p6{font-family:Arial; font-size:18px; padding-left:20px; line-height:150%; color:#666666;  font-style:italic; }
+.bar{width:40%; float:left; background-color:#006699;}
+#searchbox{font-family:Arial; font-size:18px; font-style:italic; line-height:150%; float:right; }
+#search{font-family:Arial; font-size:18px; font-weight:bold; line-height:150%; float:right; margin-right:10px; margin-top:3px; }
+
+.content{background-color:#FFFFFF; width:70%; margin:auto; }
+.title{font-family:Arial; font-size:24px; padding-left:20px; font-weight:bold; color:#333333; font-style:italic; }
+.question{font-family:Arial; font-size:20px; padding-left:28px; font-weight:bold; color:#006699; font-style:italic; }
+.para{font-family:Arial; font-size:16px; padding-left:25px; line-height:180%; color:#666666; }
+.more{font-family:Arial; font-size:16px; padding-left:25px; color:#006699; font-style:italic; font-weight:bold; }
+.info{font-family:Arial; font-size:16px; padding-left:25px; color:#3333333; font-weight:bold; }
+.explore{font-family:Arial; font-size:18px; padding-left:25px; line-height:150%; color:#666666;  font-style:italic; }
+
+.bottom{width:70%; height:48px; background-color:#F5F5F5; margin-top:3px; margin:auto; }
+.creator{font-family:Arial; font-size:14px; color:#999999; font-style:italic; padding-left:25%; margin-bottom:1px;}
+
+#answer{font-family:Arial; font-size:16px; line-height:150%; margin-left:22px;}
+#asubmit{font-family:Arial; font-size:18px; font-weight:bold; line-height:150%; margin-left:22px; }
 
 #qbox{font-family:Arial; font-size:16px; line-height:150%; margin-left:20px; }
 #qdes{font-family:Arial; font-size:16px; line-height:150%; margin-left:20px;}
 #qsubmit{font-family:Arial; font-size:18px; font-weight:bold; line-height:150%; margin-left:20px; }
 
-#answer{font-family:Arial; font-size:16px; line-height:150%; margin-left:20px;}
-#asubmit{font-family:Arial; font-size:18px; font-weight:bold; line-height:150%; margin-left:20px; }
-
+#answerbutton{font-family:Arial; font-size:16px; line-height:150%; margin-left:22px;}

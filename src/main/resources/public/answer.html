@@ -9,17 +9,17 @@
 
 <body>
 
-	<div id="banner">
-		<div id="img2"><img src="images/slogan.PNG" alt="Welcome to Dr.Know!"/></div>
-		<a href="login.html"><div class="h">Login  /  Sign Up</div></a>
+	<div class="banner">
+		<div class="img2"><img src="images/slogan.PNG" alt="Welcome to Dr.Know!"/></div>
+		<a href="login.html"><p class="login">Login  /  Sign Up</p></a>
 	</div>
 	
-	<div id="main">
+	<div class="main">
 		
-	<div id="top">
-		<div id="img"><img src="images/logo.png" alt="Welcome to Dr.Know!" height="100" width="180"/></div>
+	<div class="top">
+		<div class="img"><img src="images/logo.png" alt="Welcome to Dr.Know!" height="100" width="180"/></div>
 
-		<div id="menu">
+		<div class="menu">
 		<ul>
 			<li><a href="">Followings</a></li>
 			<li><a href="ask.html">Ask</a></li>
@@ -28,45 +28,37 @@
 		</ul>	
 		</div>
 		
-	  <div id="bar">
+	  <div class="bar">
 		<input name="search" type="submit" id="search" value="Search"/>
 		<input name="searchbox" type="text" size="30" id="searchbox" value=" Search your question..." onBlur="if(this.value=='') {this.value=' Search your question...'}" onFocus="if(this.value==' Search your question...') 		{this.value=''; this.style.color='#999999';}" />
 	  </div>
 		
 	</div>		
 	
-	<div id="content">
+	<div class="content">
 		<br/>
-		<p>Question</p>
+		<p class="title">Question</p>
 		<hr/><br/>
 		
-		<div class="p1">How is Java different from other languages?</div>
-		<br/><br/>
-		<div class="p2">Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation </div>
-		<div class="p2">dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms</div>
-		<div class="p2">that support Java without the need for recompilation.</div>
-		<br/>
-		<div class="p2">I am almost totally uneducated in programming and computer science in general, so how is Java being so different from other programming languages?</div>
-		
-		<br/><br/>
-		<div class="p4">Asked by AAA</div>&nbsp;&nbsp;&nbsp;<div class="p4">Current Answers(68)</div>
+		<p class="question">How is Java different from other languages?</p>
+		<p class="para">Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.<br/><br/>I am almost totally uneducated in programming and computer science in general, so how is Java being so different from other programming languages?</p>
+		<p class="more">Asked by AAA</p>&nbsp;&nbsp;&nbsp;<p class="info">Current Answers(68)</p>
 		<br/>
 		<hr style="border:0.5px #cccccc dashed"/>
 		<br/>
 		
-		<div class="p1">Your Answer:</div>
-		<br/><br/>
+		<p class="question">Your Answer:</p>
+		<br/>
 		<textarea name="answer" cols="80" rows="12" id="answer"></textarea>
-		
 		<br/><br/>
 		<input name="asubmit" type="submit" size="10" id="asubmit" value="submit" />
-		<br/>
+		<br/><br/><br/>
 
 	</div>
 			
-	<div id="bottom">
+	<div class="bottom">
 	<br/>
-	<div class="p5">Nice to meet you in this knowledgeable world! &nbsp; | &nbsp; Created by Yichao Chen</div>	
+	<p class="creator">Nice to meet you in this knowledgeable world! &nbsp; | &nbsp; Created by Yichao Chen</p>	
 	</div>
 	
 	</div>
@@ -74,4 +66,5 @@
 
 </body>
 </html>
+
 
