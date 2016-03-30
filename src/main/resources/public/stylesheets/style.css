@@ -5,7 +5,7 @@
 
 .main{background-color:#F5F5F5;}
 
-.top{width:70%; margin:auto; height:80px; background-color:#006699;}
+.top{width:80%; margin:auto; height:80px; background-color:#006699;}
 .img{float:left; }
 .menu{width:40%; height:76px; float:left; background-color:#006699; }
 li{float:right; font-family:Arial; font-size:18px; font-weight:bold;  padding:15px; margin-top:3px;}
@@ -18,15 +18,16 @@ li a:hover{text-decoration:underline;color:#333333; }
 #searchbox{font-family:Arial; font-size:18px; font-style:italic; line-height:150%; float:right; }
 #search{font-family:Arial; font-size:18px; font-weight:bold; line-height:150%; float:right; margin-right:10px; margin-top:3px; }
 
-.content{background-color:#FFFFFF; width:70%; margin:auto; }
+.content{background-color:#FFFFFF; width:80%; margin:auto; }
 .title{font-family:Arial; font-size:24px; padding-left:20px; font-weight:bold; color:#333333; font-style:italic; }
+.question_wrapper{}
 .question{font-family:Arial; font-size:20px; padding-left:28px; font-weight:bold; color:#006699; font-style:italic; }
 .para{font-family:Arial; font-size:16px; padding-left:25px; line-height:180%; color:#666666; }
 .more{font-family:Arial; font-size:16px; padding-left:25px; color:#006699; font-style:italic; font-weight:bold; }
 .info{font-family:Arial; font-size:16px; padding-left:25px; color:#3333333; font-weight:bold; }
 .explore{font-family:Arial; font-size:18px; padding-left:25px; line-height:150%; color:#666666;  font-style:italic; }
 
-.bottom{width:70%; height:48px; background-color:#F5F5F5; margin-top:3px; margin:auto; }
+.bottom{width:80%; height:48px; background-color:#F5F5F5; margin-top:3px; margin:auto; }
 .creator{font-family:Arial; font-size:14px; color:#999999; font-style:italic; padding-left:25%; margin-bottom:1px;}
 
 #answer{font-family:Arial; font-size:16px; line-height:150%; margin-left:22px;}

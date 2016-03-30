@@ -1,7 +1,10 @@
+import com.google.gson.Gson;
 import java.sql.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Arrays;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -15,6 +18,9 @@ import static javax.measure.unit.SI.KILOGRAM;
 import javax.measure.quantity.Mass;
 import org.jscience.physics.model.RelativisticModel;
 import org.jscience.physics.amount.Amount;
+
+import com.heroku.sdk.jdbc.DatabaseUrl;
+import spark.Request;
 
 public class Main {
 
@@ -64,6 +70,69 @@ public class Main {
         if (connection != null) try{connection.close();} catch(SQLException e){}
       }
   }, new FreeMarkerEngine());
+    
+    
+    get("/following", (req, res) -> {
+        ArrayList<String> title = new ArrayList<String>();
+        title.add("title1");
+        title.add("title2");
+        title.add("title3");
+
+
+
+        ArrayList<String> description = new ArrayList<String>();
+        description.add("description1");
+        description.add("description2");
+        description.add("description3");
+
+
+
+        Map<String, Object> attributes = new HashMap<>();
+        attributes.put("title", title);
+        attributes.put("description", description);
+
+
+
+         return new ModelAndView(attributes, "following.ftl");
+      }, new FreeMarkerEngine());
+      
+      Gson gson = new Gson();
+      
+      get("/api/index", (req, res) -> {
+          List<Object> data = new ArrayList<>();
+          Connection connection = null;
+          try {
+              connection = DatabaseUrl.extract().getConnection();
+              Statement stmt = connection.createStatement();
+              ResultSet rs = stmt.executeQuery("SELECT * FROM question");
+              
+              while (rs.next()) {
+                  Map<String, Object> question = new HashMap<>();
+                  
+                  question.put("id", rs.getInt("id"));
+                  question.put("title", rs.getString("title"));
+                  question.put("description", rs.getString("description"));
+                  data.add(question);
+              }
+          } catch (Exception e) {
+              data.add("There was an error: " + e);
+          } finally {
+              if (connection != null)
+                  try {
+                      connection.close();
+                  } catch (SQLException e) {
+                  }
+          }
+          return data;
+      }, gson::toJson);
+      
+      get("/index", (request, response) -> {
+          Map<String, Object> attributes = new HashMap<>();
+          attributes.put("test", "test");
+          
+          return new ModelAndView(attributes, "index.ftl");
+      }, new FreeMarkerEngine());
+    
 
   }
 
