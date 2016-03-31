@@ -127,10 +127,13 @@ public class Main {
       }, gson::toJson);
       
       get("/index", (request, response) -> {
-          Map<String, Object> attributes = new HashMap<>();
-          attributes.put("test", "test");
+          ArrayList<String> test1 = new ArrayList<String>();
+          test1.add("aaa");
           
-          return new ModelAndView(attributes, "index.ftl");
+          Map<String, Object> test2 = new HashMap<>();
+          test2.put("test",test1);
+          
+          return new ModelAndView(test2, "test.ftl");
       }, new FreeMarkerEngine());
     
 

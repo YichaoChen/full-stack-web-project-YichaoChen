@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="Person">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="Name" type="xsd:string"/>
+<xsd:element name="Profession" type="xsd:string" />
+<xsd:element name="Age" type="xsd:string"/>
+<xsd:element name="Phone" type="xsd:string"/>
+<xsd:element name="Address" type="xsd:string"/>
+<xsd:element name="Descripton" type="xsd:string"/>
+<xsd:element name="Course" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

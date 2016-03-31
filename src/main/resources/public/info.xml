@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="info.xsd">
+
+  <Person>
+    <Name>Yichao Chen</Name>
+    <Profession>Student</Profession>
+    <Age>23</Age>
+    <Phone>123-123-1234</Phone>
+    <Address>4200 fifth ave</Address>
+    <Description>Creator of the website</Description>
+    <Course>web</Course>
+  </Person>

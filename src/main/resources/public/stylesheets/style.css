@@ -20,7 +20,7 @@ li a:hover{text-decoration:underline;color:#333333; }
 
 .content{background-color:#FFFFFF; width:80%; margin:auto; }
 .title{font-family:Arial; font-size:24px; padding-left:20px; font-weight:bold; color:#333333; font-style:italic; }
-.question_wrapper{}
+.question_wrapper{font-family:Arial;}
 .question{font-family:Arial; font-size:20px; padding-left:28px; font-weight:bold; color:#006699; font-style:italic; }
 .para{font-family:Arial; font-size:16px; padding-left:25px; line-height:180%; color:#666666; }
 .more{font-family:Arial; font-size:16px; padding-left:25px; color:#006699; font-style:italic; font-weight:bold; }
@@ -38,3 +38,5 @@ li a:hover{text-decoration:underline;color:#333333; }
 #qsubmit{font-family:Arial; font-size:18px; font-weight:bold; line-height:150%; margin-left:20px; }
 
 #answerbutton{font-family:Arial; font-size:16px; line-height:150%; margin-left:22px;}
+
+.blank{font-family:Arial;}
