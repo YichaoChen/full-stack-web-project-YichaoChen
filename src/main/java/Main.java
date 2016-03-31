@@ -163,6 +163,22 @@ public class Main {
           
           return new ModelAndView(test2, "index.ftl");
       }, new FreeMarkerEngine());
+      
+      post("/api/answer", (req, res) -> {
+          
+          Map<String, Object> data = new HashMap<>();
+          data.put("answer", "test");
+          return data;
+      }, gson::toJson);
+      
+      post("/api/register", (req, res) -> {
+          
+          Map<String, Object> data = new HashMap<>();
+          data.put("username", "username");
+          data.put("password", "password");
+          data.put("email", "email");
+          return data;
+      }, gson::toJson);
     
 
   }
