@@ -126,6 +126,34 @@ public class Main {
           return data;
       }, gson::toJson);
       
+      get("/api/test", (req, res) -> {
+          List<Object> data = new ArrayList<>();
+          Connection connection = null;
+          try {
+              connection = DatabaseUrl.extract().getConnection();
+              Statement stmt = connection.createStatement();
+              ResultSet rs = stmt.executeQuery("SELECT * FROM question");
+              
+              while (rs.next()) {
+                  Map<String, Object> question = new HashMap<>();
+                  
+                  question.put("id", rs.getInt("id"));
+                  question.put("title", rs.getString("title"));
+                  question.put("description", rs.getString("description"));
+                  data.add(question);
+              }
+          } catch (Exception e) {
+              data.add("There was an error: " + e);
+          } finally {
+              if (connection != null)
+                  try {
+                      connection.close();
+                  } catch (SQLException e) {
+                  }
+          }
+          return data;
+      }, gson::toJson);
+      
       get("/index", (request, response) -> {
           ArrayList<String> test1 = new ArrayList<String>();
           test1.add("aaa");
