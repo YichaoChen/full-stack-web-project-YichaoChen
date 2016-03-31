@@ -24,13 +24,15 @@ h1 {
 }
 
 .p2 {
-  color: #333333;
+  color: #ff0000;
+  font-size: 12px;
+  float:right;
 }
 
 
 input {
   display: block;
-  margin: 10px auto;
+  margin: 1px auto;
   width: 99%;
   padding: 8px 0;
   border: 1px solid #313131;

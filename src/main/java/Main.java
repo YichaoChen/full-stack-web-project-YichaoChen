@@ -29,21 +29,21 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    get("/hello", (req, res) -> {
-      RelativisticModel.select();
+    // get("/hello", (req, res) -> {
+    //   RelativisticModel.select();
 
-      String energy = System.getenv().get("ENERGY");
+    //   String energy = System.getenv().get("ENERGY");
 
-      Amount<Mass> m = Amount.valueOf(energy).to(KILOGRAM);
-      return "E=mc^2: " + energy + " = " + m.toString();
-    });
+    //   Amount<Mass> m = Amount.valueOf(energy).to(KILOGRAM);
+    //   return "E=mc^2: " + energy + " = " + m.toString();
+    // });
 
-    get("/", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hello World!");
+    // get("/", (request, response) -> {
+    //         Map<String, Object> attributes = new HashMap<>();
+    //         attributes.put("message", "Hello World!");
 
-            return new ModelAndView(attributes, "index.ftl");
-        }, new FreeMarkerEngine());
+    //         return new ModelAndView(attributes, "index.ftl");
+    //     }, new FreeMarkerEngine());
 
     get("/db", (req, res) -> {
       Connection connection = null;
@@ -171,14 +171,37 @@ public class Main {
           return data;
       }, gson::toJson);
       
-      post("/api/register", (req, res) -> {
+      // post("api/register", (req, res) -> {
+      //     Connection connection = null;
           
-          Map<String, Object> data = new HashMap<>();
-          data.put("username", "username");
-          data.put("password", "password");
-          data.put("email", "email");
-          return data;
-      }, gson::toJson);
+      //     System.out.println(req.body());
+      //     try {
+      //         connection = DatabaseUrl.extract().getConnection();
+      //         JSONObject obj = new JSONObject(req.body());
+      //         String username = obj.getString("username");
+      //         String password = obj.getString("password");
+      //         String email = obj.getString("email");
+              
+      //         String sql = "INSERT INTO users VALUES ('"+ username + "','" + password + "','" + email + "')";
+              
+      //         connection = DatabaseUrl.extract().getConnection();
+      //         Statement stmt = connection.createStatement();
+      //         stmt.executeUpdate(sql);
+              
+      //         ResultSet rs = stmt.executeQuery("SELECT * FROM users where username ='" + username + "'");
+      //         Map<String, Object> currentuser = new HashMap<>();
+              
+      //         currentuser.put("username", rs.getString("username"));
+      //         currentuser.put("email", rs.getString("email"));
+              
+      //         return currentuser;
+      //         //  return req.body();
+      //     } catch (Exception e) {
+      //         return e.getMessage();
+      //     } finally {
+      //         if (connection != null) try{connection.close();} catch(SQLException e){}
+      //     }
+      // });
     
 
   }

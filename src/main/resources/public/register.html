@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Dr.Know | Sign up</title>
 	<link rel="stylesheet" href="stylesheets/log.css" type="text/css" media="all" /> 
-	<script src="js/log.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/register.js"></script>
 
     
   </head>
@@ -13,22 +14,27 @@
 
 <div id="admin">
   	<div class="areaa">
-		<form name="LoginForm" action="index.html" onSubmit="return InputCheck(this)">
-     	<h1>Sign up</h1>
-		<div class="p1">Username</div>
-     	<input type="text" id="username"/>
-		<div class="p1">Password</div>
-     	<input type="password" id="password"/>
-		<div class="p1">Confirm Password</div>
-     	<input type="password" id="confirmpassword"/>
-		<div class="p1">Your email address</div>
-     	<input type="email" id="email"/>
-		<input type="submit" value="Sign up" />
-		</form>		
+  		<form id="register" method="post" action="#" onSubmit="return submitTest()">
+       	<h1>Sign up</h1>
+  		<p class="p1">Username</p>
+       	<input type="text" class="required" name="username" id="username"/>      
+      <p id="errUname" class="p2"></p>
+      <br>
+  		<p class="p1">Password</p>
+       	<input type="password" class="required" name="password" id="password"/>     
+      <p id="errPass" class="p2"></p>
+      <br>
+  		<p class="p1">Confirm Password</p>
+       	<input type="password" class="required" name="confirm" id="confirm"/>     
+      <p id="errConfirm" class="p2"></p>
+      <br>
+  		<p class="p1">Your email address</p>
+       	<input type="email" class="required" name="email" id="email"/> 		 
+      <p id="errEmail" class="p2"></p>
+        <input type="submit" value="Back" id="back"/>
+        <input type="submit" value="Submit" id="submit"/>
+  		</form>		
   	</div>
-	 <div class="areab">
-    	<input type="submit" value="Back" onClick="window.location='login.html'"/>
-   </div>
 </div>
 
 
