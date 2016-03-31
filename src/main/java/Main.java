@@ -133,7 +133,7 @@ public class Main {
           Map<String, Object> test2 = new HashMap<>();
           test2.put("test",test1);
           
-          return new ModelAndView(test2, "test.ftl");
+          return new ModelAndView(test2, "index.ftl");
       }, new FreeMarkerEngine());
     
 
