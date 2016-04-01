@@ -1,29 +1,6 @@
 
 window.onload = init;
 
-$(function(){
-        $("#submit").click(function(){
-
-        var username = $("#username").val();
-		var password = $("#password").val();
-        var email = $("#email").val();
-
-        var obj = JSON.stringify({"username":username,"password":password,"email":email});
-              $.ajax({
-                  contentType:'application/json',
-                  url: '/api/register',
-                  type: "POST",
-                  datatype: "json",
-                  data: obj,
-                  success: function(data) {
-                      alert("You have registered successfully!");
-                      window.location.href='/index.html';
-											console.log(data);
-                  }
-              });
-                    return false;
-          });
-});
 
 
 function init() {
@@ -171,5 +148,29 @@ function submitTest(){
 				}
 			return result;
 }
+
+$(function(){
+        $("#submit").click(function(){
+
+        var username = $("#username").val();
+		var password = $("#password").val();
+        var email = $("#email").val();
+
+        var obj = JSON.stringify({"username":username,"password":password,"email":email});
+              $.ajax({
+                  contentType:'application/json',
+                  url: '/api/register',
+                  type: "POST",
+                  datatype: "json",
+                  data: obj,
+                  success: function(data) {
+                      alert("You have registered successfully!");
+                      window.location.href='/index.html';
+											console.log(data);
+                  }
+              });
+                    return false;
+          });
+});
 
 
