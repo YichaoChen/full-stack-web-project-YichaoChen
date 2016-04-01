@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<About xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="info.xsd">
 
   <Person>
@@ -11,3 +11,6 @@
     <Description>Creator of the website</Description>
     <Course>web</Course>
   </Person>
+
+</About>
+

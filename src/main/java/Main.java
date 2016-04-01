@@ -145,22 +145,8 @@ public class Main {
           return data;
       }, gson::toJson);
       
-      get("/index", (request, response) -> {
-          ArrayList<String> test1 = new ArrayList<String>();
-          test1.add("aaa");
-          
-          Map<String, Object> test2 = new HashMap<>();
-          test2.put("test",test1);
-          
-          return new ModelAndView(test2, "index.ftl");
-      }, new FreeMarkerEngine());
       
-      post("/api/answer", (req, res) -> {
-          
-          Map<String, Object> data = new HashMap<>();
-          data.put("answer", "test");
-          return data;
-      }, gson::toJson);
+      
       
        post("api/register", (req, res) -> {
            Connection connection = null;
@@ -193,6 +179,54 @@ public class Main {
                if (connection != null) try{connection.close();} catch(SQLException e){}
            }
        });
+      
+      
+      get("api/about", (req, res) -> {
+          
+          Connection connection = null;
+          // res.type("application/xml"); //Return as XML
+          
+          Map<String, Object> attributes = new HashMap<>();
+          try {
+              
+              
+              String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+              xml += "<About>";
+              
+                  xml += "<Person>";
+                  xml += "<Name>Yichao Chen</Name>";
+                  xml += "<Profession>Student</Profession>";
+                  xml += "<Age>23</Age>";
+                  xml += "<University>University of Pittsburgh</University>";
+                  xml += "<School>iSchool</School>";
+                  xml += "<Major>Information Science</Major>";
+                  xml += "<Course>Web Tech and Standards</Course>";
+                  xml += "<Phone>123-123-1234</Phone>";
+                  xml += "<Email>yic85@pitt.edu</Email>";
+                  xml += "<Address>4200 Fifth Ave</Address>";
+                  xml += "</Person>";
+              
+              xml += "</About>";
+              res.type("text/xml");
+              return xml;
+              
+          } catch (Exception e) {
+              attributes.put("message", "There was an error: " + e);
+              return attributes;
+          } finally {
+              if (connection != null) try{connection.close();} catch(SQLException e){}
+          }
+      });//End api/about
+      
+      get("/about", (request, response) -> {
+          ArrayList<String> test1 = new ArrayList<String>();
+          test1.add("aaa");
+          
+          Map<String, Object> test2 = new HashMap<>();
+          test2.put("test",test1);
+          
+          return new ModelAndView(test2, "about.ftl");
+      }, new FreeMarkerEngine());
     
 
   }
